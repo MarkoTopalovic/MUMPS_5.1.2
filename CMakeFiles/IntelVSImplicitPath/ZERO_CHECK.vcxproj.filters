@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\mumps\MUMPS_5.1.2\CMakeFiles\IntelVSImplicitPath\CMakeFiles\ef6e814c3f67da44e6243f64aff41016\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B9F6FAC2-CE6B-36DE-8F11-F7FB93D6274D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
