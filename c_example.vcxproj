@@ -134,7 +134,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -154,7 +154,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Release\libdmumps.lib;C:\mumps\lapack-3.6.1\lib\Debug\blas.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\lib\Release\PORD_C.lib;C:\mumps\lapack-3.6.1\lib\Release\blas.lib;C:\mumps\lapack-3.6.1\lib\Release\lapack.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_SPECIFIC_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_C.lib;C:\mumps\lapack-3.6.1\lib\Release\blas.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
