@@ -14,8 +14,8 @@
 				<Tool Name="VFPostBuildEventTool"/>
 				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
 		<Configuration Name="Release|Win32">
-				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true"/>
-				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" AdditionalIncludeDirectories="C:\mumps\MUMPS_5.1.2\libseq; C:\mumps\MUMPS_5.1.2\include"/>
+				<Tool Name="VFLinkerTool" AdditionalOptions="/NODEFAULTLIB:library" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" AdditionalLibraryDirectories="C:\mumps\MUMPS_5.1.2\lib\Release" SubSystem="subSystemConsole" AdditionalDependencies="C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_FORTRAN.lib C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_C.lib C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_SPECIFIC_OBJ_FORTRAN.lib C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_FORTRAN.lib C:\mumps\MUMPS_5.1.2\lib\Release\libdmumps.lib C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_C.lib C:\mumps\MUMPS_5.1.2\lib\Release\PORD_C.lib C:\mumps\lapack-3.6.1\lib\Release\lapack.lib C:\mumps\lapack-3.6.1\lib\Release\blas.lib"/>
 				<Tool Name="VFResourceCompilerTool"/>
 				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
 				<Tool Name="VFCustomBuildTool"/>
@@ -27,6 +27,6 @@
 		<Filter Name="Header Files" Filter="fi;fd"/>
 		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<File RelativePath=".\Brisi2.f90"/></Filter>
+		<File RelativePath=".\Brisi2.for"/></Filter>
 		<File RelativePath=".\ReadMe.txt"/></Files>
 	<Globals/></VisualStudioProject>
