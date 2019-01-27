@@ -73,6 +73,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libdmumps", "libdmumps.vcxp
 		{5290BBB6-6173-3B0C-9695-E75DD632BCFD} = {5290BBB6-6173-3B0C-9695-E75DD632BCFD}
 	EndProjectSection
 EndProject
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "Brisi2", "Brisi2\Brisi2.vfproj", "{9ACB4439-73E9-477A-B83A-BE6E2285F509}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -173,6 +175,14 @@ Global
 		{C82D515D-7217-3AF3-ADC1-3D5A6851C028}.Release|Win32.Build.0 = Release|Win32
 		{C82D515D-7217-3AF3-ADC1-3D5A6851C028}.RelWithDebInfo|Win32.ActiveCfg = RelWithDebInfo|Win32
 		{C82D515D-7217-3AF3-ADC1-3D5A6851C028}.RelWithDebInfo|Win32.Build.0 = RelWithDebInfo|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.Debug|Win32.Build.0 = Debug|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.MinSizeRel|Win32.ActiveCfg = Release|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.MinSizeRel|Win32.Build.0 = Release|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.Release|Win32.ActiveCfg = Release|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.Release|Win32.Build.0 = Release|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.RelWithDebInfo|Win32.ActiveCfg = Release|Win32
+		{9ACB4439-73E9-477A-B83A-BE6E2285F509}.RelWithDebInfo|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
