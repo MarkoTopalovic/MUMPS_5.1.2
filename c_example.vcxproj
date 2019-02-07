@@ -40,6 +40,7 @@
     <Platform>Win32</Platform>
     <ProjectName>c_example</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -93,9 +94,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\mumps\MUMPS_5.1.2\Debug\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">c_example.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">c_example</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">c_example</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
@@ -103,9 +103,8 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\mumps\MUMPS_5.1.2\Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">c_example.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">c_example</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">c_example</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -136,7 +135,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\mumps\MUMPS_5.1.2\MUMPS_COMMON_OBJ_C.dir\Debug;C:\mumps\MUMPS_5.1.2\Debug;C:\mumps\MUMPS_5.1.2\LIBMPISEQ_C.dir\Debug;C:\mumps\MUMPS_5.1.2\libseq;C:\mumps\MUMPS_5.1.2\include;C:\mumps\MUMPS_5.1.2\PORD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\mumps\MUMPS_5.1.2\libseq;C:\mumps\MUMPS_5.1.2\include;C:\mumps\MUMPS_5.1.2\PORD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsC</CompileAs>
@@ -146,7 +145,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -164,7 +163,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\lib\Debug\PORD_C.lib;C:\mumps\lapack-3.6.1\lib\Debug\blas.lib;C:\mumps\lapack-3.6.1\lib\Debug\lapack.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_COMMON_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_SPECIFIC_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_COMMON_OBJ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_C.lib;C:\mumps\lapack-3.6.1\lib\Debug\blas.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\$(Platform)\$(Configuration)\libdmumps.lib;C:\mumps\lapack-3.6.1\lib\$(Configuration)\lapack.lib;C:\mumps\lapack-3.6.1\lib\$(Configuration)\blas.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -207,9 +206,9 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\lib\Debug\PORD_C.lib;C:\mumps\lapack-3.6.1\lib\Debug\blas.lib;C:\mumps\lapack-3.6.1\lib\Debug\lapack.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_COMMON_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_SPECIFIC_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\MUMPS_COMMON_OBJ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Debug\LIBMPISEQ_C.lib;C:\mumps\lapack-3.6.1\lib\Debug\blas.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\$(Platform)\$(Configuration)\libdmumps.lib C:\mumps\lapack-3.6.1\lib\$(Platform)\$(Configuration)\lapack.lib C:\mumps\lapack-3.6.1\lib\$(Platform)\$(Configuration)\blas.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>C:/mumps/MUMPS_5.1.2/Debug/c_example.lib</ImportLibrary>
@@ -250,7 +249,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\lib\Release\PORD_C.lib;C:\mumps\lapack-3.6.1\lib\Release\blas.lib;C:\mumps\lapack-3.6.1\lib\Release\lapack.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_SPECIFIC_OBJ_FORTRAN.lib;C:\mumps\MUMPS_5.1.2\lib\Release\MUMPS_COMMON_OBJ_C.lib;C:\mumps\MUMPS_5.1.2\lib\Release\LIBMPISEQ_C.lib;C:\mumps\lapack-3.6.1\lib\Release\blas.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>C:\mumps\MUMPS_5.1.2\$(Platform)\$(Configuration)\libdmumps.lib;C:\mumps\lapack-3.6.1\lib\$(Configuration)\lapack.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/mkl/lib/ia32/$(Configuration);C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32;C:/Program Files (x86)/Intel/Composer XE/compiler/lib/ia32/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
